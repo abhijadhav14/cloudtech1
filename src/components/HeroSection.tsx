@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { submitForm } from "@/utils/api";
 import CTSLogo from "@/assets/CTS.png";
+import BackgroundVideo from "@/assets/background.mp4";
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -62,17 +63,29 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Background gradient with animated elements */}
+    <section className="relative overflow-hidden min-h-screen">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ pointerEvents: 'none' }}
+      >
+        <source src={BackgroundVideo} type="video/mp4" />
+      </video>
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Animated Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl animate-bounce" style={{ animationDuration: '3s' }} />
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-bl from-green-500/15 to-teal-500/15 rounded-full blur-2xl animate-ping" style={{ animationDuration: '2s' }} />
       </div>
-
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
 
       <div className="container mx-auto px-4 py-12 md:py-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
