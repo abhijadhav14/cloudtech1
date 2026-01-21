@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VideoHero from "@/components/VideoHero";
 import { Star, Building, TrendingUp, Users, Award, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -148,17 +149,11 @@ const Placements = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="hero-gradient hero-pattern py-20">
-        <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Alumni <span className="text-yellow-300">Success Stories</span>
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Real stories from real people who transformed their careers with Cloud Tech Solutions
-          </p>
-        </div>
-      </section>
+      <VideoHero
+        title="Alumni"
+        highlight="Success Stories"
+        subtitle="Real stories from real people who transformed their careers with Cloud Tech Solutions"
+      />
 
       {/* Stats Section */}
       <section className="py-12 bg-card border-b">

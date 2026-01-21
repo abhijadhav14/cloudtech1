@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VideoHero from "@/components/VideoHero";
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -74,17 +75,11 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="hero-gradient hero-pattern py-20">
-        <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Get in <span className="text-yellow-300">Touch</span>
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-          </p>
-        </div>
-      </section>
+      <VideoHero
+        title="Get in"
+        highlight="Touch"
+        subtitle="Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+      />
 
       {/* Contact Section */}
       <section className="py-20">
@@ -114,7 +109,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email  </h3>
-                    <p className="text-muted-foreground">cloudtechsolutions2026@gmail.com</p>
+                    <p className="text-muted-foreground">info@cloudtechnologysolution.in</p>
                   </div>
                 </div>
 

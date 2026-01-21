@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VideoHero from "@/components/VideoHero";
 import { Clock, Users, Laptop, Star, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { title } from "process";
 
 const programs = [
   {
@@ -132,17 +132,11 @@ const Programs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      {/* Hero Section */}
-      <section className="hero-gradient hero-pattern py-20">
-        <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            Our Training <span className="text-yellow-300">Programs</span>
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Industry-ready programs designed to launch your tech career. Choose from our comprehensive range of training courses.
-          </p>
-        </div>
-      </section>
+      <VideoHero
+        title="Our Training"
+        highlight="Programs"
+        subtitle="Industry-ready programs designed to launch your tech career. Choose from our comprehensive range of training courses."
+      />
 
       {/* Programs Grid */}
       <section className="py-20">

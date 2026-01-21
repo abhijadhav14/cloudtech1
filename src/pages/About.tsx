@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import VideoHero from "@/components/VideoHero";
 import { Target, Users, Award, BookOpen, Heart, Lightbulb, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -40,13 +41,7 @@ const About = () => {
       role: "Founder",
       experience: "",
       initials: "AV",
-    },
-    {
-      name: "Lakshmi Narashima",
-      role: "Co-Founder",
-      experience: "",
-      initials: "AV",
-    },
+    }
 
   ];
 
@@ -54,17 +49,11 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="hero-gradient hero-pattern py-20">
-        <div className="container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            About <span className="text-yellow-300">Cloud Tech Solutions</span>
-          </h1>
-          <p className="text-lg opacity-90 max-w-2xl mx-auto">
-            Empowering careers since 2015. We've trained 2500+ students and helped them land their dream tech jobs.
-          </p>
-        </div>
-      </section>
+      <VideoHero
+        title="About"
+        highlight="Cloud Tech Solutions"
+        subtitle="Empowering careers since 2015. We've trained 2500+ students and helped them land their dream tech jobs."
+      />
 
       {/* Story Section */}
       <section className="py-20">
