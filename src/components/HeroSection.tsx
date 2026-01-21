@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { submitForm } from "@/utils/api";
 import CTSLogo from "@/assets/CTS.png";
+import BackgroundVideo from "@/assets/background.mov";
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -72,8 +73,7 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ pointerEvents: 'none' }}
       >
-        <source src="/background.mov" type="video/quicktime" />
-        <source src="/background.mov" type="video/mp4" />
+        <source src={BackgroundVideo} type="video/mp4" />
       </video>
 
       {/* Dark overlay for better text readability */}
